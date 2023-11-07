@@ -1,0 +1,76 @@
+<?php require 'controlador_sat.php'; ?>
+
+<!DOCTYPE html>
+
+<html lang="en">        
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Formulario SAT</title>
+</head>
+
+<body>
+    <h1>Formulario SAT</h1>
+    <form action="controlador_sat.php" method="post" id="contact_form" class="declara">
+
+
+        <ul>
+            <li>
+                <span class="required notification">*Agregue sus datos</span>
+            </li>
+
+            <li>
+                <label for="rfc">RFC</label>
+                <input type="text" name="rfc" pattern="[a-zA-Z0-9]+" placeholder="10 A 13 caracteres" minlength="10" maxlength="13" required>
+            </li>
+
+            <li>
+                <label for="periodo">Mes</label>
+                <select name="periodo" required>
+                    <option value="">Opción</option>
+                    <option value="ene">Enero</option>
+                    <option value="feb">Febrero</option>
+                    <option value="mar">Marzo</option>
+                    <option value="abr">Abril</option>
+                    <option value="may">Mayo</option>
+                    <option value="jun">Junio</option>
+                    <option value="jul">Julio</option>
+                    <option value="ago">Agosto</option>
+                    <option value="sep">Septiembre</option>
+                    <option value="oct">Octubre</option>
+                    <option value="nov">Noviembre</option>
+                    <option value="dic">Diciembre</option>
+                </select>
+            </li>
+
+            <li>
+                <label for="fecha">¿Qué día es hoy?</label>
+                <input type="date" name="fecha" min="2022-10-25" max="2023-10-25" value="<?php echo date('Y-m-d'); ?>" required>
+            </li>
+
+            <li>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" name="nombre" maxlength="40" placeholder="Nombre completo" required>
+            </li>
+
+            <li>
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" placeholder="Formato: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" required>
+            </li>
+
+            <li>
+                <label for="correo">Correo</label>
+                <input type="email" name="email" pattern=".+@gmail\.com" size="30" required placeholder="correo@gmail.com">
+            </li>
+
+            <li>
+                <button class="submit" type="submit" name="registro">Enviar</button>
+            </li>
+
+        </ul>
+    </form>
+
+</body>
+</html>

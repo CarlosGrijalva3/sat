@@ -1,0 +1,142 @@
+*:focus{
+    outline: none;
+}
+/*------TIPO GRAFIA-------*/
+
+
+
+body{
+    font: 14px/21px Arial;
+    color: #851818;
+    background: #f8f4f4;
+}
+
+.declara h2, .declara label{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.required_notification{
+    font-size: 8px;
+}
+
+.declara ul{
+    width: 750px;
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0;
+    padding: 0;
+}
+
+.declara li{
+    padding: 12px;
+    border-bottom: 3px solid #131436 ;
+}
+
+.declara li:first-child,
+.declara li:last-child{
+    border-bottom: 3px solid #131436;
+}
+
+.declara h2{
+    margin: 0;
+    display: inline;
+}
+.required_notification{
+    color: #d54525;
+    margin: 8px 0, 0, 0; 
+    display: inline;
+    float: right;
+    
+}
+
+.declara label{
+    width: 150px;
+    margin-top:  3px;
+    display: inline-block;
+    padding: 3px;
+    
+}
+
+.declara button{
+    margin-left: 156px;
+}
+
+.declara input{
+    height: 20px;
+    width: 220px;
+    padding: 5px 8px;
+    border: 1px solid #5e4c08;
+    box-shadow: 0px 0px 3px #ccc 0, 10px, 15px #eee inset ;
+    border-radius: 2px;
+    padding-right: 30px;
+    transition: padding .25s;
+}
+
+.declara input:focus{
+    background: #fff7fb;
+    border: 1px solid rgb(0,122,0);
+    box-shadow: 0 0 3px #c27377;
+    padding-right: 70px;
+}
+
+.forn_hint{
+    background: #d54525;
+    border-radius: 3px;
+    color: #a32626;
+    margin-left: 8px;
+    padding: 1px 6px;
+    z-index: 999;
+    position: absolute;
+    display: none;
+}
+
+.form_hint::before{
+    color: #d54525;
+    position: absolute;
+    top: 1px;
+    left: -6px;
+}
+
+
+.declara input:focus + .forn_hint{
+    display: inline;
+}
+
+.declara input:required:valid + .forn_hint{
+    background: #28921f;
+}
+
+.declara input:required:valid + .forn_hint::before{
+    background: #28921f;
+}
+
+button.submit{
+    background: #a74247;
+    background: linear-gradient(top, #68b12f, #50911f);
+    border: 1px solid #4c5744;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 00 #9fd574;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+
+.submit{
+    width: 35%;
+    height: 30px;
+}
+
+button.submit:hover{
+    opacity: .85;
+    cursor: pointer;
+}
+
+button.submit:active{
+    box-shadow: 0 0 0 2px #b47276;
+}
+
+
+
